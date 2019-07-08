@@ -1,0 +1,9 @@
+data/
+mseedAnalysis_window.py
+latest_CI.SLA..BHZ.png
+pyslink2mseed_ISA.py
+pyslink2mseed_PASC.py
+stations.txt
+test.py
+.DS_Store
+.idea/
