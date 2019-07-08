@@ -6,8 +6,6 @@ The system is aimed to quickly analyze earthquake waveform and provide reliable 
 
 ## Usage
 1. run pyslink2mseed_SLA.py to collect realtime waveform data from CI_SLA station.
-
-
 2. run mseedAnalysis.py to plot waveform from last 10 minutes.
 
 
@@ -15,3 +13,7 @@ Note: The system cannot provide accurate magnitude analysis and warning at this 
 
 ## Plan
 The system will first focus on LA, US. Welcome more people to contribute to this repo.
+
+## Resources
+1. seedlink -> https://ds.iris.edu/ds/nodes/dmc/services/seedlink/
+2. seismic stations search -> http://www.iris.washington.edu/gmap/#network=_REALTIME&planet=earth
