@@ -14,6 +14,9 @@ Note: The system cannot provide accurate magnitude analysis and warning at this 
 ## Plan
 The system will first focus on LA, US. Welcome more people to contribute to this repo.
 
+## Credit
+Part of the code is from @iannesbitt: https://github.com/iannesbitt/pyslink2mseed
+
 ## Resources
 1. seedlink -> https://ds.iris.edu/ds/nodes/dmc/services/seedlink/
 2. seismic stations search -> http://www.iris.washington.edu/gmap/#network=_REALTIME&planet=earth
