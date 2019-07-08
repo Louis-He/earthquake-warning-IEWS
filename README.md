@@ -6,10 +6,15 @@ The system is aimed to quickly analyze earthquake waveform and provide reliable 
 
 ## Usage
 1. run pyslink2mseed_SLA.py to collect realtime waveform data from CI_SLA station.
-2. run mseedAnalysis.py to plot waveform from last 10 minutes.
+2. run mseedAnalysis.py to plot waveform from last 10 minutes (update every 2 seconds).
 
+pyslink2mseed_SLA.py is used to fetch latest data.
 
-Note: The system cannot provide accurate magnitude analysis and warning at this stage
+mseedAnalysis.py is used to display latest data, with not much analysis.
+
+mseedAnalysis_server.py works without GUI. This file focuses on analyzing the waveform.
+
+<strong>Note: The system cannot provide accurate magnitude analysis and warning at this stage</strong>
 
 ## Plan
 The system will first focus on LA, US. Welcome more people to contribute to this repo.
