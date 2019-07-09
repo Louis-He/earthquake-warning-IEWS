@@ -12,7 +12,7 @@ pyslink2mseed_SLA.py is used to fetch latest data.
 
 mseedAnalysis.py is used to display latest data, with not much analysis.
 
-mseedAnalysis_server.py works without GUI. This file focuses on analyzing the waveform.
+mseedAnalysis_server.py works without GUI(<strong>Need smtplib</strong> to send email). This file focuses on analyzing the waveform.
 
 <strong>Note: The system cannot provide accurate magnitude analysis and warning at this stage</strong>
 
