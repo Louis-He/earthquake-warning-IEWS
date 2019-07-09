@@ -1,8 +1,13 @@
 # IEWS(Immediate Earthquake Warning System)
+![](https://img.shields.io/badge/Python-3.6-blue.svg)
 
 ## Introduction
 System uses realtime earthquake data from IRIS. Still under active development.
 The system is aimed to quickly analyze earthquake waveform and provide reliable earthquake warning.
+
+## Current Status
+1. Able to fetch single station realtime waveform.
+2. Able to alert new seismic event from single station waveform data.
 
 ## Usage
 1. run pyslink2mseed_SLA.py to collect realtime waveform data from CI_SLA station.
