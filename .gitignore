@@ -1,4 +1,5 @@
-data/
+data/*
+!data/.gitkeep
 mseedAnalysis_window.py
 latest_CI.SLA..BHZ.png
 pyslink2mseed_ISA.py
