@@ -1,5 +1,10 @@
 # IEWS(Immediate Earthquake Warning System)
 ![](https://img.shields.io/badge/Python-3.6-blue.svg)
+![](https://img.shields.io/badge/alpha-running-brightgreen.svg)
+![](https://img.shields.io/badge/beta-unknown-grey.svg)
+![](https://img.shields.io/badge/release-unknown-grey.svg)
+
+IEWS_CA alpha version is now running on server. System status: http://138.68.4.232:8088/status
 
 ## Introduction
 System uses realtime earthquake data from IRIS. Still under active development.
@@ -11,7 +16,7 @@ The system is aimed to quickly analyze earthquake waveform and provide reliable 
 
 ## Usage
 1. run pyslink2mseed_SLA.py to collect realtime waveform data from CI_SLA station.
-2. run mseedAnalysis.py to plot waveform from last 10 minutes (update every 2 seconds).
+2. run mseedAnalysis.py to plot waveform from last 10 minutes (update every second).
 
 pyslink2mseed_SLA.py is used to fetch latest data.
 
