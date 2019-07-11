@@ -1,8 +1,9 @@
 from obspy.clients.seedlink.easyseedlink import EasySeedLinkClient
-from obspy.core.trace import Trace
 from obspy.core.stream import read
 from obspy.core import UTCDateTime
+
 import os
+import requests
 
 # client_addr is in address:port format
 client_addr = 'rtserve.iris.washington.edu:18000'
@@ -11,11 +12,15 @@ sta = 'SLA' # station name
 cha = 'BHZ' # channel
 
 loc = '00' # Since obspy doesn't take location codes, this only affects the filename
+multipleLoc = False
 
 # Subclass the client class
 class MyClient(EasySeedLinkClient):
 	# Implement the on_data callback
 	def on_data(self, trace):
+		if (multipleLoc and trace.get_id().find(loc) == -1):
+			return
+
 		day = UTCDateTime.now().strftime('%Y.%j')
 		fn = 'data/%s.%s.%s.%s.D.%s' % (net, sta, loc, cha, day)
 
@@ -32,6 +37,10 @@ class MyClient(EasySeedLinkClient):
 		print('Saving traces to %s...' % (fn))
 		traces.write(fn, format='MSEED')
 		print('Done.')
+		try:
+			requests.request(url='http://0.0.0.0:8088/updateSocket', method='GET')
+		except:
+			print('Cannot update status.')
 
 # Connect to a SeedLink server
 client = MyClient(client_addr)

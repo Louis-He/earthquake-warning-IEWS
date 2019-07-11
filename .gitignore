@@ -6,5 +6,7 @@ pyslink2mseed_ISA.py
 pyslink2mseed_PASC.py
 stations.txt
 test.py
+twilioAPI.py
+setting.py
 .DS_Store
 .idea/

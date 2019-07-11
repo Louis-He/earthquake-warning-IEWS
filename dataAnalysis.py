@@ -64,8 +64,9 @@ def magnitudeToText(mag):
     else:
         return "> 6.7"
 
-def processArrData(velocityArr):
+def processSingleChannelData(velocityArr):
     maximum = max(velocityArr)
+    maximum *= math.sqrt(3)
     maxMagnitude = transferToMagnitude(maximum)
 
     return maxMagnitude
@@ -193,7 +194,7 @@ def newDataReady(latestRecord, newList):
             if(currentSeismicEventIdx == -1):
                 return 0
 
-        if((abs(newList[currentSeismicEventIdx]["timeEnd"] - lastRecord["timeEnd"])) < 0.1):
+        if((abs(newList[currentSeismicEventIdx]["peakVel"] - lastRecord["peakVel"])) < 0.01):
             if(currentSeismicEventIdx == len(newList) - 1):
                 return -1
             else:
@@ -219,11 +220,11 @@ def analysis(net, sta, loc, cha):
     traceFile.trim(t - 10 * 60, t)
     traceCopy = traceFile[0].copy()
 
-    maxMag = magnitudeToText(round(processArrData(traceFile[0].data) * math.sqrt(3), 2))
-    magNow = magnitudeToText(round(processArrData(traceFile[0].data[-40 * 30:]) * math.sqrt(3), 2))
+    maxMag = magnitudeToText(round(processSingleChannelData(traceFile[0].data), 2))
+    magNow = magnitudeToText(round(processSingleChannelData(traceFile[0].data[-40 * 30:]), 2))
 
     draw(traceFile, maxMag, magNow)
 
-    eventList = identifyEvent(trace = traceCopy, tolerence=0.00028)
+    eventList = identifyEvent(trace=traceCopy, tolerence=0.00028)
 
     return eventList

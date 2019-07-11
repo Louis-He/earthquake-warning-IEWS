@@ -1,0 +1,82 @@
+$def with (headerHtml, footerhtml, status)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IEWS_CA Status Page</title>
+  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+  <div class="container">
+    <!-- Site header START -->
+    $:headerHtml
+    <!-- Site header START -->
+    <hr>
+
+    <body>
+      <div style="margin-left: 10%; margin-right: 10%; font-size: 18px">
+        <div class="row">
+          <div class="col">
+            $if status["overall"] == -1:
+              <div style="color: #1d2124; text-align: center; font-size: 30px;padding-bottom: 20px; padding-top: 20px; border-bottom: #4e555b; border-bottom-width: 3px; border-bottom-style: solid; margin-bottom: 20px"> ? Unknown </div>
+            $elif status["overall"] == 1:
+              <div style="color: #1e7e34; text-align: center; font-size: 30px;padding-bottom: 20px; padding-top: 20px; border-bottom: #4e555b; border-bottom-width: 3px; border-bottom-style: solid; margin-bottom: 20px"> ✓ All Operational </div>
+            $elif status["overall"] == 0:
+              <div style="color: #dc3545; text-align: center; font-size: 30px;padding-bottom: 20px; padding-top: 20px; border-bottom: #4e555b; border-bottom-width: 3px; border-bottom-style: solid; margin-bottom: 20px"> ! Service Down </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            IRIS seedlink Socket
+          </div>
+          <div class="col-6" style="text-align: right; padding: 10px">
+            $if status["subSystem"]["IRIS seedlink Socket"] == -1:
+              <div style="color: #1d2124; text-align: right;"> ? Unknown </div>
+            $elif status["subSystem"]["IRIS seedlink Socket"] == 1:
+              <div style="color: #1e7e34; text-align: right;"> ✓ Operational </div>
+            $elif status["subSystem"]["IRIS seedlink Socket"] == 0:
+              <div style="color: #dc3545; text-align: right;"> ! Down </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            IEWS Analysis System
+          </div>
+          <div class="col-6" style="text-align: right; padding: 10px">
+            $if status["subSystem"]["IEWS Analysis System"] == -1:
+              <div style="color: #1d2124; text-align: right;"> ? Unknown </div>
+            $elif status["subSystem"]["IEWS Analysis System"] == 1:
+              <div style="color: #1e7e34; text-align: right;"> ✓ Operational </div>
+            $elif status["subSystem"]["IEWS Analysis System"] == 0:
+              <div style="color: #dc3545; text-align: right;"> ! Down </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            IEWS Email Service
+          </div>
+          <div class="col-6" style="text-align: right; padding: 10px">
+            $if status["subSystem"]["IEWS Email Service"] == -1:
+              <div style="color: #1d2124; text-align: right;"> ? Unknown </div>
+            $elif status["subSystem"]["IEWS Email Service"] == 1:
+              <div style="color: #1e7e34; text-align: right;"> ✓ Operational </div>
+            $elif status["subSystem"]["IEWS Email Service"] == 0:
+              <div style="color: #dc3545; text-align: right;"> ! Down </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    <!-- Site footer START -->
+    $:footerhtml
+    <!-- Site footer END -->
+
+  </div>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/bootstrap.bundle.js"></script>
+</html>
