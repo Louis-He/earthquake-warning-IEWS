@@ -5,8 +5,9 @@ from obspy.core import UTCDateTime
 import os
 import requests
 
+from setting import *
+
 # client_addr is in address:port format
-client_addr = 'rtserve.iris.washington.edu:18000'
 net = 'CI' # network code
 sta = 'SLA' # station name
 cha = 'BHZ' # channel
