@@ -7,7 +7,6 @@ pyslink2mseed_PASC.py
 stations.txt
 test.py
 twilioAPI.py
-twitterAPI.py
 setting.py
 .DS_Store
 .idea/
