@@ -5,11 +5,13 @@ import time
 import requests
 
 from emailAPI import *
+from twitterAPI import *
 from dataAnalysis import *
 
 latestRecord = []
 
 # emailNotification(9.0, "***** TEST ***** TEST ***** TEST *****")
+# twitterNotification(0.0, "***** TEST *****")
 while True:
     eventList = analysis(net='CI', sta='SLA', loc='00', cha='BHZ')
 
@@ -24,6 +26,7 @@ while True:
             print(startStr, endStr, mag)
 
             emailNotification(mag, startStr)
+            twitterNotification(mag, startStr)
 
     latestRecord = eventList
     try:
