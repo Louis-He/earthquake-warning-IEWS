@@ -38,3 +38,4 @@ Part of the code is from @iannesbitt: https://github.com/iannesbitt/pyslink2msee
 ## Resources
 1. seedlink -> https://ds.iris.edu/ds/nodes/dmc/services/seedlink/
 2. seismic stations search -> http://www.iris.washington.edu/gmap/#network=_REALTIME&planet=earth
+3. More seedlink connections -> rtserver.ipgp.fr:18000(GEOSCOPE); geofon.gfz-potsdam.de:18000(GEOFON); rtserve.ird.nc:18000; ws.icgc.cat:18000
