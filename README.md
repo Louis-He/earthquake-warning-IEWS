@@ -1,10 +1,13 @@
 # IEWS(Immediate Earthquake Warning System)
 ![](https://img.shields.io/badge/Python-3.6-blue.svg)
+![](https://img.shields.io/badge/twitter-running-brightgreen.svg)
 ![](https://img.shields.io/badge/alpha-running-brightgreen.svg)
 ![](https://img.shields.io/badge/beta-unknown-grey.svg)
 ![](https://img.shields.io/badge/release-unknown-grey.svg)
 
 IEWS_CA alpha version is now running on server. System status: http://iews.siweihe.tech/status
+
+twitter: IEWS_CA_Alerts
 
 ## Introduction
 System uses realtime earthquake data from IRIS. Still under active development.
