@@ -1,10 +1,13 @@
 # IEWS(Immediate Earthquake Warning System)
 ![](https://img.shields.io/badge/Python-3.6-blue.svg)
-![](https://img.shields.io/badge/alpha-running-brightgreen.svg)
-![](https://img.shields.io/badge/beta-unknown-grey.svg)
-![](https://img.shields.io/badge/release-unknown-grey.svg)
+![](https://img.shields.io/badge/Twitter-Active-brightgreen.svg)
+![](https://img.shields.io/badge/Alpha-Running-brightgreen.svg)
+![](https://img.shields.io/badge/Beta-Unknown-grey.svg)
+![](https://img.shields.io/badge/Release-Unknown-grey.svg)
 
 IEWS_CA alpha version is now running on server. System status: http://iews.siweihe.tech/status
+
+twitter: IEWS_CA_Alerts
 
 ## Introduction
 System uses realtime earthquake data from IRIS. Still under active development.
@@ -38,3 +41,4 @@ Part of the code is from @iannesbitt: https://github.com/iannesbitt/pyslink2msee
 ## Resources
 1. seedlink -> https://ds.iris.edu/ds/nodes/dmc/services/seedlink/
 2. seismic stations search -> http://www.iris.washington.edu/gmap/#network=_REALTIME&planet=earth
+3. More seedlink connections -> rtserver.ipgp.fr:18000(GEOSCOPE); geofon.gfz-potsdam.de:18000(GEOFON); rtserve.ird.nc:18000; ws.icgc.cat:18000
