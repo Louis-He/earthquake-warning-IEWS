@@ -3,6 +3,7 @@
 # READ Usage guidelines for IRIS DMC services for more information https://ds.iris.edu/ds/nodes/dmc/services/usage/
 client_addr = 'rtserve.iris.washington.edu:18000'
 stations = [{"net": "CI", "sta": "SLA", "cha": "BHZ", "loc": "00", "multipleLoc": False}]
+updateStatus = True # whether send heartbeat to the status web
 
 # setting for email
 emailReceivers = ["a@b.c", "a2@b.c"]

@@ -22,11 +22,13 @@ while True:
             startStr = datetime.datetime.utcfromtimestamp(singleEvent["timeStart"]).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
             endStr = datetime.datetime.utcfromtimestamp(singleEvent["timeEnd"]).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
 
-            mag = round(transferToMagnitude(singleEvent["peakVel"] * math.sqrt(3)), 2)
-            print(startStr, endStr, mag)
+            dateNow = int(time.mktime(datetime.datetime.utcnow().timetuple()))
+            if(dateNow - singleEvent["timeStart"] < 10 * 60):
+                mag = round(transferToMagnitude(singleEvent["peakVel"] * math.sqrt(3)), 2)
+                print(startStr, endStr, mag)
 
-            emailNotification(mag, startStr)
-            twitterNotification(mag, startStr)
+                emailNotification(mag, startStr)
+                twitterNotification(mag, startStr)
 
     latestRecord = eventList
     try:

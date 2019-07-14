@@ -34,7 +34,6 @@ def transferToMagnitude(velocity):
     return mag
 
 def transferToIntensity(velocity):
-    Intensity = 0
     if(velocity < 0.1):
         Intensity = 1
     elif(velocity <= 0.4):
